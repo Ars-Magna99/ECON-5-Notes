@@ -1,5 +1,6 @@
 2018年4月3日 Data: Cases, Variables, Samples
-
+------------------------------------------
+```r
 #引入mosaic包裹
 require(mosaic)
 #从swim.csv文件中获取信息
@@ -17,3 +18,4 @@ swim = transform(swim,minutes = time/60) #增加一个变量
 
 deal(kids,5) #随机获取5个样本，不重复
 resample(kids,5)#随机获取kids中的5个样本，可重复
+```
