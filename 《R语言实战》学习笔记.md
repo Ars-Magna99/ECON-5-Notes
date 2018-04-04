@@ -55,3 +55,24 @@ pdf（“pdffile.pdf"）
 png("filename.png")
 jpeg)("filename.jpeg")
 ```
+* 1.4 包（package）
+<br>&ensp可选模块的安装和使用。用户贡献的模块可以从
+&emsp；http://cran.r-project.org/web/packages  下载
+
+<br>&ensp;Q:什么是包？
+<br>&ensp;A: 包是R函数、数据和预编译代码以一种定义完善的方式组合成的集合。计算机上储存包的目录称为*库（library）*
+`library()` 显示目前库中所有的包
+
+下载的二进制程序包（ggplot2）在
+	<br>/var/folders/yt/x2pcqd8913q476l9hc2d9zgc0000gn/T//RtmpCpmz9v/downloaded_packages里
+  
+* 1.5 批处理 
+<br>&emsp; 有的时候交互式的编程比较繁琐，我们会希望以一种重复的、程序化的、无人值守的方式来执行某个R程序。这时候就需要写一个程序，在批处理模式下执行。
+<br>对终端使用命令：``R CMD BATCH options infile outfile`` infile是执行的R代码所在的文件，outfile是接收输出文件的文件名，option则是一些细节的控制。按照惯例，infile的扩展名是R，outfile是Rout.
+
+* 1.7处理  大数据包
+<br> R可以处理GB到TB级别的数据集
+
+*
+<br>
+<br>
