@@ -19,3 +19,24 @@ swim = transform(swim,minutes = time/60) #增加一个变量
 deal(kids,5) #随机获取5个样本，不重复
 resample(kids,5)#随机获取kids中的5个样本，可重复
 ```
+
+* if-statement in excel
+```
+#check the marriage status 
+=IF(B2 = "1 Yes",TRUE,FALSE)
+```
+<br>
+
+```
+= IF(B2 = "1 Yes",TRUE,IF(B2 = "2 No",FALSE,""))
+```
+<br>
+
+```
+= IF(D2 > 0,D2,"")
+```
+<br>
+
+```
+=COUNTIFS(C5:G5,"" )
+```
