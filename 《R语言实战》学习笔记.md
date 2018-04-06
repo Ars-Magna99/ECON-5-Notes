@@ -76,3 +76,84 @@ jpeg)("filename.jpeg")
 *
 <br>
 <br>
+
+## 2018年4月5日 第二章：创建数据集
+<br>数据集是由观测数据组成的一个矩形数组，__行表示观测，列表示变量。__
+<br>R可以处理数值型、逻辑型、字符型、复数型（虚数）、原生型（字节）变量。但是我们需要在输入数据的时候告诉R这些变量是什么类型。
+<br> 
+* 数据结构：向量，矩阵，数组，数据框
+<br> &emsp;向量：储存数值型、字符型和逻辑型的__一维数组__。``c()``函数可在R中创建一个向量。
+<br> &emsp;矩阵：二维数组。每个元素类型必须相同，通过``matrix()``来创建
+```r
+#生成一个5*4的矩阵
+> y <- matrix(1:20,nrow=5,ncol = 4)
+> y
+     [,1] [,2] [,3] [,4]
+[1,]    1    6   11   16
+[2,]    2    7   12   17
+[3,]    3    8   13   18
+[4,]    4    9   14   19
+[5,]    5   10   15   20
+
+```
+<br>
+
+```r
+#生成一个2*2的矩阵，按行进行填充以后再按列进行填充。
+> cells <- c(1,26,24,68)
+> cnames  <-c("C1","C2")
+> mymatrix <- matrix(cells,nrow=2,ncol=2,byrow=TRUE,dimnames = list(rnames,cnames))
+> mymatrix
+   C1 C2
+R1  1 26
+R2 24 68
+> mymatrix <- matrix(cells,nrow=2,ncol=2,byrow=FALSE,dimnames = list(rnames,cnames))
+> mymatrix
+   C1 C2
+R1  1 24
+R2 26 68
+```
+<br>
+
+```r
+> wzycell <- c(6,3,2,0,5,1,1,4,6)
+> cnames <-c("C1","C2","C3")
+> rnames <-c("R1","R2","R3")
+> wzy_new <- matrix(wzycell,nrow = 3,ncol = 3,byrow =TRUE,dimnames = list(rnames,cnames))
+> wzy_new
+   C1 C2 C3
+R1  6  3  2
+R2  0  5  1
+R3  1  4  6
+> wzy_new <- matrix(wzycell,nrow = 3,ncol = 3,byrow =FALSE,dimnames = list(rnames,cnames))
+> wzy_new
+   C1 C2 C3
+R1  6  0  1
+R2  3  5  4
+R3  2  1  6
+
+#print out some elements of the matrix
+> wzy_new[1,1]
+[1] 6
+> wzy_new[2,3]
+[1] 4
+```
+<br> &emsp; 数据框：最常处理的数据结构。
+```r
+> patientID <-c(1,2,3,4)
+> age <- c(25,34,28,52)
+> diabetes <-c("type1","type2","type1","type1")
+> status <-c("Poor","good","excellent","Poor")
+> patientdata <- data.frame(patientID,age,diabetes,status)
+> patientdata
+  patientID age diabetes    status
+1         1  25    type1      Poor
+2         2  34    type2      good
+3         3  28    type1 excellent
+4         4  52    type1      Poor
+> table(patientdata$diabetes,patientdata$status)
+       
+        excellent good Poor
+  type1         1    0    2
+  type2         0    1    0
+```
