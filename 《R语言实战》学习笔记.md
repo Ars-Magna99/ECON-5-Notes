@@ -168,3 +168,29 @@ mydata <- read.table(filename,header = TRUE,sep = "delimiter",row.names = "name"
 > mydata <- read.dta()
 ```
 <br>至此，第二章学习暂时告一段落。下一章为图形初阶。
+
+## 2018年4月6日 第三章：图形初阶
+
+* R是一个惊艳的图形构建平台。 
+```r
+#绑定数据框
+> attach(mtcars)
+#弹出图形窗口，绘制图形
+> plot(wt,mpg)
+#添加拟合曲线
+> abline(lm(mpg~wt))
+#添加标题
+> title("Regression of MPG on Weight")
+#解绑数据框
+> detach(mtcars)
+```
+自己尝试的：
+```r
+> diabetes <- read.csv("diabetes2015.csv")
+> attach(diabetes)
+> plot(BPAD,BPAN)
+> abline(lm(BPAN~BPAD))
+> title("Regression of BPAN on BPAD")
+> detach(diabetes)
+```
+
