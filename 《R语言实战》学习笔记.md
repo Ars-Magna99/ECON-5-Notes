@@ -159,7 +159,6 @@ R3  2  1  6
 ```
 * 导入数据的方法：键盘输入，从文本文件导入，从EXCEL导入，导入XML数据，从网页抓取,SPS，SASS,STATA等等
 * 从Excel导入数据：读取Excel文件的最好方式就是保存为csv文件。
-<br>
 ```r
 mydata <- read.table(filename,header = TRUE,sep = "delimiter",row.names = "name")
 ```
