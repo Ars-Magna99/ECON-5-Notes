@@ -196,6 +196,11 @@ mydata <- read.table(filename,header = TRUE,sep = "delimiter",row.names = "name"
 
 修改一些图像的参数：
 <br>
+no.readonly = true 可以生成一个可修改的当前图形的参数。
+``par <- par(no.readonly= TRUE)``
+
+修改一些图像的参数：
+<br>
 
 ```r
 > dose <- c(20,30,40,45,60)
