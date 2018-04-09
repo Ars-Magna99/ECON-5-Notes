@@ -214,3 +214,40 @@ no.readonly = true 可以生成一个可修改的当前图形的参数。
 > plot(dose,drugA,type = "b")
 > par(opar)
 ```
+* 线条和符号
+<br>
+
+|变量|意义|
+----|----
+pch|指定绘制点时的符号
+cex|指定符号的大小，是一个数值，代表默认值的倍数
+lty|绘制线条的类型
+lwd|指定线条宽度
+<br>
+
+* 颜色
+<br>
+
+|参数|描述|
+-----|----|
+col|默认绘图颜色，某些函数可以接受一个含有颜色的向量并自动循环
+col.axis|坐标轴刻度文字的颜色
+col.lab|坐标轴标签的颜色
+col.main|标题的颜色
+col.sub|副标题颜色
+fg|图形前景色
+bg|图形背景色
+<br>
+
+```r
+> dose <- c(20,30,40,45,60)
+> drugA <- c(16,20,27,40,60)
+> drugB <- c(15,18,25,31,40)
+> opar <- par(no.readonly = TRUE)
+> par(pin = c(2,3))
+> par(lwd = 2,cex = 1.5)
+> par(cex.axis=.75,font.axis = 3)
+> plot(dose,drugA,type = "b",pch = 19,lty = 2,col="red")
+> plot(dose,drugB,type = "b",pch = 23,lty = 6,col="blue",bg = "green")
+> par(opar)
+```
