@@ -77,3 +77,6 @@ http://略
 <br>
 
 * ``recode`` is used to group a numeric variable into catefories.
+<br>
+
+* 开启 log : `` log using 文件名 .txt, text replacing``
