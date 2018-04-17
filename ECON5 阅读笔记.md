@@ -45,3 +45,35 @@ resample(kids,5)#随机获取kids中的5个样本，可重复
 ```
 =IFNA(IF(C2 < 60,"F",IF(C2 < 70,"D",IF(C2<80,"C",IF(C2<90,"B",IF(C2<=100,"A",""))))),"W")
 ```
+<br>
+
+2018年4月17日 STATA基本操作
+------------------------
+<br>
+
+* If there are temporary variables you do not need in the saved file you can drop them (before saving) using ``drop`` varnames. Alternatively, you may specify the variables you want to keep, using ``keep varnames``. With large files you may want to ``compress`` them before saving; this command looks at the data and stores each variable in the smallest possible data type that will not result in loss of precision.
+<br>
+
+* variable names can have up to 32 characters, but many conmmand print only 12. Stata names are case sensitive(age ! = Age)
+<br>
+
+* ``encode`` convert string data into a numeric variable. ``decode`` convert numeric variables to string.
+<br>
+
+* If data are in free format.with variables seperated by blanks or commas, you can use the ``inflie`` command
+<br>
+
+```stata
+inflie str14 country setting effort change using ///
+http://略
+```
+
+<br>
+
+* you can label your variables using ``label variable`` followed by name of variable.
+<br>
+
+* Stata has a lot of frequently used mathematical functions. use ``help mathfun``
+<br>
+
+* ``recode`` is used to group a numeric variable into catefories.
