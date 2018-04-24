@@ -1,3 +1,19 @@
+第七节课的笔记和主要任务
+本节课主要学习了一些简单的STATA制图命令。
+比如
+graph twoway line [yvar] [xvar], options
+graph twoway scatter [yvar] [xvar],options
+graph bar [yvar1] [yvar],over[] options
+graph box [yvar]],over [] options
+
+//name()
+  lcolor()
+  legend(order())
+  box (1,fcolor(orange) lcolor(green))
+  
+
+
+
 /*	Econ 5/Poli 5D, Lecture 7
 	Zack Goodman
 	In-class Team Activity
