@@ -40,6 +40,7 @@ display avg_happins
 gen ln_happins = ln(happins)
 
 //7.5 Add a label to ln_happins (in quotes below)
+//注意一下，这里很容易忘记写中间的var.记住，label和rename有区别，固定格式是“ label var 变量名 “目标标签”   ”
 label var ln_happins "Natural logarithm of the happiness index"
 
 //7.75 Create a variable "happins_high" = 1 if >3.3, otherwise 0, and
