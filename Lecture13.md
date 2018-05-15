@@ -94,6 +94,7 @@ lines(x = rep(mean(afghan$educ.years), 2), y = c(-100, 1500))
 
 # Can we create a histrogram for afghan$income? Why or why not?
 #       Hint: check class(afghan$income)
+#答：不能，因为income的class是factor,不能用histogram来表现。
 
 
 
@@ -139,13 +140,42 @@ lim <- c(-1.5, 1.5)
 
 # Create a scatterplot for the 80th Congress of ideological leanings.
 plot(1, type = "n", # Type "n" specifies no plotting
-     = lim, 
-     = lim, 
-     = xlab, 
-     = ylab,
-     = "80th Congress")
-points(, , = 16, = "blue") # democrats
-points(, , = 17, = "red") # republicans
+xlim = lim, 
+ylim = lim, 
+xlab = xlab, 
+ylab = ylab,
+main = "80th Congress")
+points(dem80$dwnom1,dem80$dwnom2,pch = 16,col = "blue") # democrats
+points(rep80$dwnom1,rep80$dwnom2,pch = 17,col = "red") # republicans
 text(-0.75, 1, "Democrats")
 text(1, -1, "Republicans")
+
+# Create a similar scatterplot for the 112th Congress
+plot(1,type = "n",
+     xlim = xlim,
+     ylim = ylim,
+     xlab = xlab,
+     ylab = ylab,
+     main = "112th Congress")
+points(dem112$dwnom1,dem112$dwnom2,pch = 16,col = "blue") #democrats
+points(rep112$dwnom1,rep112$dwnom2,pch = 17,col = "red")# relublican
+
+# Calculate party median for each congress (done for you)
+dem.median <- tapply(dem$dwnom1, dem$congress, median)
+rep.median <- tapply(rep$dwnom1, rep$congress, median)
+
+# Plot line graphs of party ideological median over time
+# First we'll plot democrats
+plot(names(dem.median),dem.median, 
+col  = "blue", 
+type = "l", # type "l" for line
+xlim  = c(80, 115), 
+ylim  = c(-1, 1), 
+xlab  = "Congress",
+ylab  = "Median ideological leaning of party")
+# Add Republicans
+lines(names(rep.median),rep.median , 
+col = "red")
+text(110, -0.6, "Democratic\n Party")
+text(110, 0.85, "Republican\n Party")
 ```
