@@ -133,3 +133,37 @@ if(X){
 }
 ```
 <br>
+
+```r
+# if-elseif-else 判定代码块
+if(X){
+ exp1a
+ exp2a
+ ...
+ expNa
+}else if(Y){
+ exp1b
+ exp2b
+ ...
+ expNb
+}else{
+ exp1c
+ exp2c
+ ...
+ expNc
+}
+```
+<br>
+
+* 4.1.3 Poll Predictions
+<br>
+
+```r
+pull08$margin <- pull08$obama - poll$McCain # 预测的差值
+pres08$margin <- pres08$obama - pres08$McCain #实际差值
+```
+<br>
+
+* 数据去重： unique()提取所有单独的取值
+
+``st.names <- unique(polls08$state)``
