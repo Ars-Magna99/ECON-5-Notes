@@ -95,3 +95,39 @@ cat(values[i],"times 2 is equal to",results[i],"\n")
 }
 ```
 <br>
+
+* 4.1.2 Constataditional Statements
+<br>
+`` ifelse(X,Y,Z) `` if X is True, Y returned; if X is False, Z returned.
+<br>
+`` if(){} ``  and  `` if(){}else{} ``
+<br>
+Basic Index:
+<br>
+
+```r
+# if判定代码块
+if(X){
+exp1
+exp2
+...
+expN
+}
+```
+<br>
+
+```r
+# if-else 判定代码块
+if(X){
+ exp1a
+ exp2a
+ ...
+ expNa
+}else{
+ exp1b
+ exp2b
+ ...
+ expNb
+}
+```
+<br>
