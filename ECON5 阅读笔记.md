@@ -80,3 +80,18 @@ http://略
 <br>
 
 * 开启 log : `` log using 文件名 .txt, text replacing``
+
+2018年5月20日 4.1和4.2
+---------------------
+<br>
+
+* 4.1.1 loops in R
+
+```r
+results <- rep(NA,n) # create an empty container
+for(i in 1:n){
+results[i] <- values[i] * 2
+cat(values[i],"times 2 is equal to",results[i],"\n")
+}
+```
+<br>
