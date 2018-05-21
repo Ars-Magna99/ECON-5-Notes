@@ -167,3 +167,12 @@ pres08$margin <- pres08$obama - pres08$McCain #实际差值
 * 数据去重： unique()提取所有单独的取值
 
 ``st.names <- unique(polls08$state)``
+
+<br>
+
+* 数据的分组：tapply()
+<br>
+
+```r
+tapply(flags$animate, flags$landmass, mean) #将flags$animate的数据按照flags$landmass的值进行分组，然后对各组应用mean()计算均值。
+```
