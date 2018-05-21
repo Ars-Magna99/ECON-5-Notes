@@ -98,8 +98,10 @@ cat(values[i],"times 2 is equal to",results[i],"\n")
 
 * 4.1.2 Constataditional Statements
 <br>
-`` ifelse(X,Y,Z) `` if X is True, Y returned; if X is False, Z returned.
+
+``ifelse(X,Y,Z)``  #if X is True, Y returned; if X is False, Z returned.
 <br>
+
 `` if(){} ``  and  `` if(){}else{} ``
 <br>
 Basic Index:
